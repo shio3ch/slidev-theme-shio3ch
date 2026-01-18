@@ -1,7 +1,7 @@
 {
   "tasks": {
-    "dev": "deno run -A npm:@slidev/cli slides.md --theme ./theme",
-    "build": "deno run -A npm:@slidev/cli build slides.md --theme ./theme",
-    "export": "deno run -A npm:@slidev/cli export slides.md --theme ./theme"
+    "dev": "deno run -A npm:@slidev/cli example/slides.md",
+    "build": "deno run -A npm:@slidev/cli build example/slides.md",
+    "export": "deno run -A npm:@slidev/cli export example/slides.md"
   }
 }

@@ -88,44 +88,59 @@
 
   table {
     thead {
-      @apply text-gray-950 bg-gray-200;
+      background: var(--theme-primary-lighter);
+      color: var(--slidev-text-primary);
     }
     td {
-      @apply text-gray-950 bg-light-300;
+      background: var(--slidev-bg-secondary);
+      color: var(--slidev-text-primary);
     }
     tr:nth-child(odd) td {
-      @apply bg-light-50;
+      background: var(--slidev-bg);
+    }
+  }
+
+  html.dark & table {
+    thead {
+      background: var(--theme-primary-darker);
     }
   }
 
   .check {
-    @apply relative border-2 rounded border-blue-300 p-2 pt-6;
+    @apply relative border-2 rounded p-2 pt-6;
+    border-color: var(--theme-primary-light);
 
     &::before {
       content: 'Check';
-      @apply flex absolute top-0.5 left-2 text-xs text-gray-400;
+      @apply flex absolute top-0.5 left-2 text-xs;
+      color: var(--slidev-text-muted);
     }
   }
 
   .tips {
-    @apply relative border-2 rounded border-gray-300 p-2 pt-6 text-sm;
+    @apply relative border-2 rounded p-2 pt-6 text-sm;
+    border-color: var(--slidev-border-strong);
 
     &::before {
       content: 'Tips';
-      @apply flex absolute top-0.5 left-2 text-xs text-gray-400;
+      @apply flex absolute top-0.5 left-2 text-xs;
+      color: var(--slidev-text-muted);
     }
   }
 
   .copyright {
-    @apply flex justify-end text-xs text-gray-500;
+    @apply flex justify-end text-xs;
+    color: var(--slidev-text-muted);
   }
 
   .extra {
-    @apply text-gray-400 my-5;
+    @apply my-5;
+    color: var(--slidev-text-muted);
   }
 
   .quotation {
-    @apply flex justify-end text-sm text-gray-500;
+    @apply flex justify-end text-sm;
+    color: var(--slidev-text-muted);
 
     &::before {
       content: '引用元:';

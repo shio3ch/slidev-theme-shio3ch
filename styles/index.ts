@@ -1,0 +1,8 @@
+import '@slidev/client/styles/layouts-base.css'
+import 'prism-theme-vars/base.css'
+import 'codemirror-theme-vars/base.css'
+import 'prism-theme-vars/to-codemirror.css'
+import './base.css'
+import './layouts.css'
+import './layout-extend.css'
+import './prism.css'

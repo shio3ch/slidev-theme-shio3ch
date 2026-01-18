@@ -1,9 +1,26 @@
 {
-  "name": "slidev-theme-shio3ch-dev",
+  "name": "slidev-theme-shio3ch",
+  "version": "0.0.1",
+  "description": "A Slidev theme for shio3ch",
+  "keywords": [
+    "slidev",
+    "slidev-theme",
+    "theme"
+  ],
   "private": true,
+  "engines": {
+    "slidev": ">=52.0.0"
+  },
+  "slidev": {
+    "colorSchema": "both",
+    "defaults": {
+      "layout": "default"
+    }
+  },
   "dependencies": {
-    "@slidev/cli": "^52.0.0",
     "@slidev/client": "^52.0.0",
-    "@slidev/types": "^52.0.0"
+    "@slidev/types": "^52.0.0",
+    "codemirror-theme-vars": "^0.1.2",
+    "prism-theme-vars": "^0.2.4"
   }
 }

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap');
+
+:root {
+  /* Primary Colors - Light Green Theme */
+  --theme-primary: #10b981;
+  --theme-primary-light: #34d399;
+  --theme-primary-lighter: #6ee7b7;
+  --theme-primary-dark: #059669;
+  --theme-primary-darker: #047857;
+
+  /* Accent Colors */
+  --theme-accent: #14b8a6;
+  --theme-accent-light: #2dd4bf;
+
+  /* Font Family */
+  --slidev-font-family: 'M PLUS 2', sans-serif;
+  --slidev-code-font-family: 'M PLUS 2', monospace;
+}
+
+/* Light Mode */
+html:not(.dark) {
+  /* Background */
+  --slidev-bg: #ffffff;
+  --slidev-bg-secondary: #f0fdf4;
+  --slidev-bg-tertiary: #ecfdf5;
+
+  /* Text */
+  --slidev-text-primary: #1f2937;
+  --slidev-text-secondary: #4b5563;
+  --slidev-text-muted: #6b7280;
+
+  /* Borders */
+  --slidev-border: #d1fae5;
+  --slidev-border-strong: #a7f3d0;
+
+  /* Code */
+  --slidev-code-background: #f0fdf4;
+
+  /* Slidev UI Colors */
+  color-scheme: light;
+  --slidev-slide-background: var(--slidev-bg);
+}
+
+/* Dark Mode */
+html.dark {
+  /* Background */
+  --slidev-bg: #0f172a;
+  --slidev-bg-secondary: #1e293b;
+  --slidev-bg-tertiary: #334155;
+
+  /* Text */
+  --slidev-text-primary: #f1f5f9;
+  --slidev-text-secondary: #cbd5e1;
+  --slidev-text-muted: #94a3b8;
+
+  /* Borders */
+  --slidev-border: #334155;
+  --slidev-border-strong: #475569;
+
+  /* Code */
+  --slidev-code-background: #1e293b;
+
+  /* Slidev UI Colors */
+  color-scheme: dark;
+  --slidev-slide-background: var(--slidev-bg);
+}
+
+/* Base Styles */
+.slidev-layout {
+  font-family: var(--slidev-font-family);
+  background: var(--slidev-bg);
+  color: var(--slidev-text-primary);
+}
+
+/* Heading Styles */
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  color: var(--slidev-text-primary);
+}
+
+.slidev-layout h4,
+.slidev-layout h5,
+.slidev-layout h6 {
+  color: var(--slidev-text-secondary);
+}
+
+/* Link Styles */
+.slidev-layout a {
+  color: var(--theme-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.slidev-layout a:hover {
+  border-bottom-color: var(--theme-primary);
+}
+
+html.dark .slidev-layout a {
+  color: var(--theme-primary-light);
+}
+
+html.dark .slidev-layout a:hover {
+  border-bottom-color: var(--theme-primary-light);
+}
+
+/* Cover Layout Enhancement */
+.slidev-layout.cover {
+  background: linear-gradient(135deg, var(--slidev-bg) 0%, var(--slidev-bg-secondary) 100%);
+}
+
+.slidev-layout.cover h1 {
+  color: var(--theme-primary-dark);
+}
+
+html.dark .slidev-layout.cover h1 {
+  color: var(--theme-primary-light);
+}
+
+/* Selection */
+::selection {
+  background: var(--theme-primary-lighter);
+  color: var(--theme-primary-darker);
+}
+
+html.dark ::selection {
+  background: var(--theme-primary-dark);
+  color: var(--slidev-text-primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--slidev-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-primary-dark);
+}

@@ -9,6 +9,9 @@ Slidev用のカスタムテーマ（slidev-theme-shio3ch）。Denoを使用し�
 ## 開発コマンド
 
 ```sh
+# example/ディレクトリに移動してから実行
+cd example
+
 # 開発サーバー起動
 deno task dev
 
@@ -22,19 +25,39 @@ deno task export
 ## アーキテクチャ
 
 ```
-theme/                    # テーマ本体
+/                         # テーマ本体（ルート）
 ├── layouts/              # スライドレイアウト（Vue SFC）
-│   ├── default.vue       # デフォルトレイアウト
-│   └── cover.vue         # カバーレイアウト
-├── styles/index.css      # テーマのCSS（CSS変数でカラー定義）
-├── setup/main.ts         # テーマ初期化・スタイル読み込み
+│   ├── cover.vue         # カバーレイアウト
+│   ├── fact.vue
+│   ├── intro.vue
+│   ├── quote.vue
+│   ├── section.vue
+│   └── statement.vue
+├── styles/               # テーマのCSS
+├── components/           # Vueコンポーネント
+├── public/               # 静的ファイル
+├── global-bottom.vue     # グローバルボトムコンポーネント
 └── package.json          # テーマメタデータ
 
-slides.md                 # プレビュー用サンプルスライド
+example/                  # 開発用ディレクトリ
+├── slides.md             # プレビュー用サンプルスライド
+└── deno.json             # 開発タスク
 ```
 
 ## テーマ開発のポイント
 
-- 新しいレイアウトを追加する場合は `theme/layouts/` にVueファイルを作成
-- カラーやスタイルの変更は `theme/styles/index.css` のCSS変数を編集
-- `slides.md` でテーマの見た目を確認しながら開発
+- 新しいレイアウトを追加する場合は `layouts/` にVueファイルを作成
+- カラーやスタイルの変更は `styles/` 内のCSSファイルを編集
+- `example/slides.md` でテーマの見た目を確認しながら開発
+
+## 他プロジェクトからの利用
+
+他のSlidevプロジェクトからGitHub経由でテーマを利用可能：
+
+```json
+{
+  "dependencies": {
+    "slidev-theme-shio3ch": "github:shio3ch/slidev-theme-shio3ch"
+  }
+}
+```
