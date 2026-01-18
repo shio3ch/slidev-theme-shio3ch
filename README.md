@@ -1,2 +1,9 @@
 # slidev-theme-shio3ch
-slidevのテーマを作成してみるリポジトリ。
+
+- Slidevテーマ
+
+## 使い方
+
+```sh
+deno task dev
+```
