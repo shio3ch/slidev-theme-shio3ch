@@ -1,0 +1,11 @@
+{
+  "name": "slidev-theme-shio3ch",
+  "version": "0.0.1",
+  "description": "A Slidev theme template for shio3ch",
+  "keywords": [
+    "slidev",
+    "slidev-theme",
+    "theme"
+  ],
+  "private": true
+}
