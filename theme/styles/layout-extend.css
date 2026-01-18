@@ -1,0 +1,135 @@
+.slidev-layout {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply mb-1.5rem;
+  }
+
+  h4,
+  h5 {
+    @apply w-max;
+    @apply pr-0.5rem;
+    @apply border-b-3 border-b-double;
+
+    & ~ p,
+    & ~ ul,
+    & ~ ol {
+      @apply ml-2rem;
+    }
+  }
+
+  p {
+    @apply leading-relaxed;
+
+    &:has(+ h1, + h2, + h3, + h4, + h5) {
+      @apply mb-2.5rem;
+    }
+  }
+
+  ul,
+  ol {
+    @apply mt-1rem;
+    @apply mb-1.5rem;
+
+    &:has(+ h1, + h2, + h3, + h4, + h5) {
+      @apply mb-2.5rem;
+    }
+  }
+
+  /* v-click を含むdivの余白調整 */
+  div[v-click],
+  .slidev-vclick-target {
+    @apply mt-1.5rem;
+
+    &:first-child {
+      @apply mt-0;
+    }
+  }
+
+  /* 強調ボックスの余白調整 */
+  .border {
+    @apply mt-1.5rem mb-1rem;
+  }
+
+  /* h3/h4 直後の段落・リストの余白 */
+  h3 + p,
+  h4 + p,
+  h3 + ul,
+  h4 + ul,
+  h3 + ol,
+  h4 + ol {
+    @apply mt-0.5rem;
+  }
+
+  /* text-gray などの補足テキストブロックの余白 */
+  .text-gray {
+    @apply mt-0.5rem;
+  }
+
+  ul {
+    li {
+      @apply list-disc;
+    }
+
+    ul > li {
+      @apply list-circle;
+    }
+
+    ul ul > li {
+      @apply list-square;
+    }
+
+    &:has(ul) ul {
+      @apply my-0.25rem;
+    }
+  }
+
+  table {
+    thead {
+      @apply text-gray-950 bg-gray-200;
+    }
+    td {
+      @apply text-gray-950 bg-light-300;
+    }
+    tr:nth-child(odd) td {
+      @apply bg-light-50;
+    }
+  }
+
+  .check {
+    @apply relative border-2 rounded border-blue-300 p-2 pt-6;
+
+    &::before {
+      content: 'Check';
+      @apply flex absolute top-0.5 left-2 text-xs text-gray-400;
+    }
+  }
+
+  .tips {
+    @apply relative border-2 rounded border-gray-300 p-2 pt-6 text-sm;
+
+    &::before {
+      content: 'Tips';
+      @apply flex absolute top-0.5 left-2 text-xs text-gray-400;
+    }
+  }
+
+  .copyright {
+    @apply flex justify-end text-xs text-gray-500;
+  }
+
+  .extra {
+    @apply text-gray-400 my-5;
+  }
+
+  .quotation {
+    @apply flex justify-end text-sm text-gray-500;
+
+    &::before {
+      content: '引用元:';
+      @apply pr-0.5rem;
+    }
+  }
+}
