@@ -1,0 +1,9 @@
+{
+  "name": "slidev-theme-shio3ch-dev",
+  "private": true,
+  "dependencies": {
+    "@slidev/cli": "^52.0.0",
+    "@slidev/client": "^52.0.0",
+    "@slidev/types": "^52.0.0"
+  }
+}

@@ -1,3 +1,5 @@
-import '../styles/index.css'
+import { defineAppSetup } from '@slidev/types'
 
-export const themeName = 'shio3ch'
+export default defineAppSetup(({ app }) => {
+  // Vue app setup (add plugins, etc.)
+})

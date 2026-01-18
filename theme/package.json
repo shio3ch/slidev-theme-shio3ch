@@ -7,5 +7,18 @@
     "slidev-theme",
     "theme"
   ],
-  "private": true
+  "private": true,
+  "engines": {
+    "slidev": ">=52.0.0"
+  },
+  "slidev": {
+    "colorSchema": "dark",
+    "defaults": {
+      "layout": "default"
+    }
+  },
+  "dependencies": {
+    "@slidev/client": "^52.0.0",
+    "@slidev/types": "^52.0.0"
+  }
 }
