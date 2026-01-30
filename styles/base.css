@@ -8,6 +8,9 @@
   --theme-primary-dark: #059669;
   --theme-primary-darker: #047857;
 
+  /* Hand-drawn line */
+  --theme-handdrawn-line: var(--theme-primary-dark);
+
   /* Accent Colors */
   --theme-accent: #14b8a6;
   --theme-accent-light: #2dd4bf;
@@ -60,6 +63,9 @@ html.dark {
   /* Code */
   --slidev-code-background: #1e293b;
 
+  /* Hand-drawn line */
+  --theme-handdrawn-line: var(--theme-primary-light);
+
   /* Slidev UI Colors */
   color-scheme: dark;
   --slidev-slide-background: var(--slidev-bg);
@@ -77,6 +83,27 @@ html.dark {
 .slidev-layout h2,
 .slidev-layout h3 {
   color: var(--slidev-text-primary);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+}
+
+.slidev-layout h1::after,
+.slidev-layout h2::after,
+.slidev-layout h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.6rem;
+  background-color: var(--theme-handdrawn-line);
+  opacity: 0.9;
+  pointer-events: none;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='8' viewBox='0 0 120 8' fill='none'><path d='M1 4 C 10 1 20 7 30 4 S 50 7 60 4 S 80 7 90 4 S 110 7 119 4' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>") repeat-x;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='8' viewBox='0 0 120 8' fill='none'><path d='M1 4 C 10 1 20 7 30 4 S 50 7 60 4 S 80 7 90 4 S 110 7 119 4' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>") repeat-x;
+  -webkit-mask-size: 120px 8px;
+  mask-size: 120px 8px;
 }
 
 .slidev-layout h4,
