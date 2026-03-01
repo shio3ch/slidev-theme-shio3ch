@@ -20,10 +20,8 @@ Slide Subtitle
 - Slide bullet text
 
 ---
-
 layout: image-right
 image: https://source.unsplash.com/collection/94734566/1920x1080
-
 ---
 
 # Slide Title
@@ -37,37 +35,168 @@ Colons can be used to align columns.
 | zebra stripes |   are neat    |    $1 |
 
 ---
-
-## layout: section
-
-# Section Title
-
+layout: section
 ---
 
-## layout: statement
-
-# Statement
+# section layout
 
 ---
+layout: statement
+---
 
-## layout: fact
+# statement layout
 
-# 100%
+---
+layout: fact
+---
+
+# fact layout
 
 Fact information
 
 ---
+layout: quote
+---
 
-## layout: quote
-
-# "Notable quote"
+## quote layout
 
 Attribution
 
 ---
-
 layout: image-left
-image: https://source.unsplash.com/collection/94734566/1920x1080
+image: public/profile.png
+---
+
+# image-left layout
+
+---
+layout: two-cols
+---
+
+::header::
+
+# two-cols layout
+
+育三
+
+::left::
+
+## ::left::
+
+- 左側のコンテンツ
+- テキストや図を配置
+- 対比して見せたい時に
+
+::right::
+
+## ::right::
+
+- 右側のコンテンツ
+- こちらにも自由に配置
+- Before / After にも
+
+---
+layout: cards
+---
+
+# cards layout
+
+::one::
+
+### 高速
+
+Slidevはブラウザベースで高速なプレゼンテーションを実現します。
+
+::two::
+
+### 柔軟
+
+Markdownで書けて、Vueコンポーネントも使えます。
+
+::three::
+
+### 美しい
+
+テーマによるカスタマイズで美しいスライドを作成できます。
+
+---
+layout: comparison
+labelLeft: Before
+labelRight: After
+---
+
+::header::
+
+# Comparison Layout
+
+::default::
+
+```ts
+function calc(a, b, c) {
+  return a * b + c - a;
+}
+```
+
+- 変数名が不明瞭
+- 処理の意図がわからない
+
+::right::
+
+```ts
+function calculateTotal(price: number, quantity: number, tax: number) {
+  return price * quantity + tax - price;
+}
+```
+
+- 型付きで安全
+- 意味のある命名
+
+---
+layout: profile
+image: public/profile.png
+---
+
+::name::
+
+# ロビンソン
+
+森の妖精
+
+::default::
+
+- きゅうりそんなに好きじゃない
+
+---
+layout: four-cards
+---
+
+::header::
+
+## four-cards layout
+
+::one::
+
+### ⚡ 高速
+
+ブラウザベースでホットリロード対応。書いたらすぐ反映。
+
+::two::
+
+### 📝 Markdown
+
+慣れた Markdown で書ける。コードブロックもそのまま。
+
+::three::
+
+### 🎨 テーマ
+
+テーマを切り替えるだけでデザインが変わる。
+
+::four::
+
+### 🧩 拡張性
+
+Vue コンポーネントで自由にカスタマイズ可能。
 
 ---
 
@@ -89,26 +218,10 @@ function updateUser(id: number, update: Partial<User>) {
 ```
 
 ---
-
 layout: center
 class: "text-center"
-
 ---
 
 # Learn More
 
 [Documentations](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
-
----
-
-# H1
-
-## H2
-
-### H3
-
-#### H4
-
-##### H5
-
-###### H6
