@@ -22,7 +22,7 @@ const showMascot = computed(() => {
 
 <style scoped>
 .mascot-container {
-  position: fixed;
+  position: absolute;
   bottom: 1rem;
   right: 1rem;
   z-index: 10;
