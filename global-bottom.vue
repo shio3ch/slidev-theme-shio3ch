@@ -7,7 +7,7 @@ import mascotImage from './public/kappa.png'
 const { currentLayout } = useNav()
 
 // マスコットを非表示にするレイアウト
-const hiddenLayouts = ['cover', 'intro', 'section', 'fact', 'statement', 'quote', 'center', 'end']
+const hiddenLayouts = ['cover', 'intro', 'section', 'fact', 'statement', 'quote', 'center', 'end', 'image-right', 'image-left', 'cards', 'star-rating', 'comparison', 'profile', 'four-cards']
 
 const showMascot = computed(() => {
   return !hiddenLayouts.includes(currentLayout.value ?? '')
@@ -22,7 +22,7 @@ const showMascot = computed(() => {
 
 <style scoped>
 .mascot-container {
-  position: fixed;
+  position: absolute;
   bottom: 1rem;
   right: 1rem;
   z-index: 10;

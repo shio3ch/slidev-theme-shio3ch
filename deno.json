@@ -3,5 +3,6 @@
     "dev": "deno run -A npm:@slidev/cli example/slides.md",
     "build": "deno run -A npm:@slidev/cli build example/slides.md",
     "export": "deno run -A npm:@slidev/cli export example/slides.md"
-  }
+  },
+  "nodeModulesDir": "auto"
 }
