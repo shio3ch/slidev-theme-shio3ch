@@ -36,6 +36,7 @@ Colons can be used to align columns.
 
 ---
 layout: section
+sectionNumber: "01"
 ---
 
 # section layout
@@ -197,6 +198,46 @@ layout: four-cards
 ### 🧩 拡張性
 
 Vue コンポーネントで自由にカスタマイズ可能。
+
+---
+layout: timeline
+---
+
+::header::
+
+## Timeline Layout
+
+::one::
+
+### 企画
+
+アイデアを出し、要件を整理する。
+
+::two::
+
+### 開発
+
+設計・実装・テストを繰り返す。
+
+::three::
+
+### リリース
+
+デプロイして運用を開始する。
+
+---
+layout: highlight
+---
+
+# 99.9%
+
+サービス稼働率
+
+::aside::
+
+### 高い信頼性
+
+24時間365日の監視体制と自動復旧により、安定したサービスを提供しています。
 
 ---
 
