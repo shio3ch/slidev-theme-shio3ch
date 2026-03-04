@@ -15,6 +15,25 @@
   --theme-accent: #14b8a6;
   --theme-accent-light: #2dd4bf;
 
+  /* Gradients */
+  --theme-gradient-primary: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-accent) 100%);
+  --theme-gradient-accent: linear-gradient(135deg, var(--theme-primary-dark) 0%, var(--theme-primary-light) 100%);
+  --theme-gradient-subtle: linear-gradient(135deg, var(--theme-primary-lighter) 0%, var(--theme-accent-light) 100%);
+
+  /* Shadows */
+  --theme-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --theme-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --theme-shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --theme-shadow-glow: 0 0 20px rgba(16, 185, 129, 0.15);
+
+  /* Glass-morphism */
+  --theme-glass-bg: rgba(255, 255, 255, 0.6);
+  --theme-glass-border: rgba(255, 255, 255, 0.3);
+  --theme-glass-blur: 12px;
+
+  /* Transition */
+  --theme-transition: cubic-bezier(0.4, 0, 0.2, 1);
+
   /* Font Family */
   --slidev-font-family: 'M PLUS 2', sans-serif;
   --slidev-code-font-family: 'M PLUS 2', monospace;
@@ -65,6 +84,16 @@ html.dark {
 
   /* Hand-drawn line */
   --theme-handdrawn-line: var(--theme-primary-light);
+
+  /* Shadows (dark) */
+  --theme-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --theme-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --theme-shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
+  --theme-shadow-glow: 0 0 25px rgba(16, 185, 129, 0.2);
+
+  /* Glass-morphism (dark) */
+  --theme-glass-bg: rgba(30, 41, 59, 0.7);
+  --theme-glass-border: rgba(71, 85, 105, 0.4);
 
   /* Slidev UI Colors */
   color-scheme: dark;
@@ -148,6 +177,11 @@ html.dark .slidev-layout::after {
 .slidev-layout h2,
 .slidev-layout h3 {
   color: var(--slidev-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.slidev-layout h1 {
+  letter-spacing: -0.02em;
 }
 
 .slidev-layout h4,
@@ -161,7 +195,7 @@ html.dark .slidev-layout::after {
   color: var(--theme-primary);
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.3s var(--theme-transition);
 }
 
 .slidev-layout a:hover {
